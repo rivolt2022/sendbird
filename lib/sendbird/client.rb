@@ -56,7 +56,7 @@ module Sendbird
           fail NotValidApplication.new(invalid_application_message(app))
         end
       else
-        @api_key = Sendbird.applications[Sendbird.default_app]
+        @api_key = Sendbird.applications[:default_app]
       end
       @api_key
     end
